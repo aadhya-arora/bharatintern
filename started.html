@@ -1,0 +1,239 @@
+
+<html>
+    <head>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js"></script>
+    </head>
+    <style>
+     .u:hover
+     {
+        color: black;
+     }
+     .a
+     {
+       text-align: center;
+       font-size: 50px;
+       
+     }
+     .b
+     {
+        margin-left: 20px;
+        margin-top: 30px;
+        text-align: left;
+        font-size: 20px;
+        
+     }
+     .x{
+        overflow-y: scroll;
+        resize: none;
+        height: 60px;
+        width:250px;
+        margin-left: 110px;
+        margin-top: -20px;
+     }
+     .t
+     {
+        overflow-y: scroll;
+        resize: none;
+        height: 60px;
+        width: 250px;
+        margin-left: 160px;
+        margin-top: -20px;
+     }
+     .l
+     {
+        height: 50px;
+        overflow-x: scroll;
+        width: 200px;
+        margin-left: 200px;
+        margin-top: -20px;
+     }
+     .s:hover{
+        color:black;
+     }
+     a
+     {
+       color:antiquewhite;
+       text-decoration: none;
+     }
+     .dropdown {
+   display: inline-block;
+   margin-left: 30px;
+ }
+
+ .dropdown-content {
+   display: none;
+   position: absolute;
+   background-color: rgb(0,0,33);
+   box-shadow: 0px 8px 16px 0px rgb(0, 0, 0, 0.2);
+   z-index: 1;
+ }
+
+ .dropdown-content a {
+   color: antiquewhite;
+   padding: 12px 16px;
+   text-decoration: none;
+   display: block;
+ }
+
+ .dropdown-content a:hover {
+   background-color: rgb(153, 153, 256);
+ }
+
+ .dropdown:hover .dropdown-content {
+   display: block;
+ }
+ .sub-dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: rgb(0, 0, 33);
+        box-shadow: 0px 8px 16px 0px rgb(0, 0, 0, 0.2);
+        z-index: 1;
+        left: 100%;
+        top: 0;
+    }
+
+    .dropdown-content:hover .sub-dropdown-content {
+        display: block;
+    }
+
+    .dropdown-content:hover .sub-dropdown-content a {
+        display: block;
+    }
+
+    .sub-dropdown-content a {
+        display: none;
+        color: antiquewhite;
+        padding: 12px 16px;
+        text-decoration: none;
+        width:70px;
+    }
+
+    .sub-dropdown-content a:hover {
+        background-color: rgb(153, 153, 256);
+    }
+    .sub-dropdown-content-left {
+        display: none;
+        position: absolute;
+        background-color: rgb(0, 0, 33);
+        box-shadow: 0px 8px 16px 0px rgb(0, 0, 0, 0.2);
+        z-index: 1;
+        right: 100%;
+        top: 0;
+    }
+
+    .dropdown-content:hover .sub-dropdown-content-left {
+        display: block;
+    }
+
+    .dropdown-content:hover .sub-dropdown-content-left a {
+        display: block;
+    }
+
+    .sub-dropdown-content-left a {
+        display: none;
+        color: antiquewhite;
+        padding: 12px 16px;
+        text-decoration: none;
+        width: 70px;
+    }
+
+    .sub-dropdown-content-left a:hover {
+        background-color: rgb(153, 153, 256);
+    }
+    </style>
+   <body bgcolor="white">
+        <nav style="background-color:rgb(21,21,116);padding: 10; color: antiquewhite;" >
+          <ul >  
+            <li style=" text-align:left;font-size: 30px;color: antiquewhite;margin-left: 80px;display: inline-block;" >CAREER PORTFOLIO</li>
+            <li style=" margin-left: 570px;display:inline-block;" ><a href="website.html"  class="s">Home</a></li> 
+            <li class="u" style="margin-left: 30px;display: inline-block;"><a href="about.html" class="s">About</a></li>
+            <li class="u" style="margin-left:30px ;display: inline-block;">Service</li>
+            <li class="u" style="margin-left: 30px;display: inline-block;"><a href="projects.html" class="s">Projects</a></li>
+            <li class="dropdown">
+               <span class="u">Contact Us</span>
+                <div class="dropdown-content">
+                    <a href="#" class="sub-dropdown-trigger">Email</a>
+                    <div class="sub-dropdown-content">
+                        <a href="mailto:another.email@example.com">Aadhya </a>
+                        <a href="mailto:another.email@example.com">Aarohi </a>
+                    </div>
+                  
+                    <a href="#" class="sub-dropdown-trigger">LinkedIn</a>
+                    <div class="sub-dropdown-content-left">
+                        <a href="https://www.linkedin.com/in/aadhya-arora-89700b293">Aadhya</a>
+                        <a href="">Aarohi</a>
+                    </div>
+                </div>
+      
+              </li>
+        </ul> 
+        </nav>
+        <form id="portfolioForm" > 
+        <section style="background-color:rgb(0,0,33);height: 950px; width:700px;margin-left: 400px; margin-top: 100px;color: white;">
+          <div class="a">FILL YOUR DETAILS<div>
+            <div class="b">Name: <input type="text"><br>
+            <p style="margin-top: 10px;">Email-id: <input type="text"></p>
+            <p >Date of Birth: <input type="date" ></p>
+            <p >Job preference:  <select name="job" style="background-color: rgb(245, 245, 250); padding: 10px; border-radius: 60%;">
+                <option value="1">Software Engineer</option>
+                <option value="2">Web developer</option>
+                <option value="3">Sales Manager</option>
+                <option value="4">Data entry operator</option>
+                <option value="5">Managing director</option>
+                <option value="6">Accountant</option>
+            </select></p>
+            <p >Experience:<br><textarea class="x">Enter your experience here........</textarea></p>
+            <p>Expertise:<br><textarea class="x">Enter your expertise here........</textarea></p>
+            <p>Highest level of Education: <select name="ed" style="padding: 5px; background-color: aliceblue;">
+                <option value="a">High school Graduate</option>
+                <option value="b">PhD Graduate</option>
+                <option value="c">Student Graduate</option>
+                <option value="d">Master's Graduate</option>
+                <option value="e">PhD Doctrate</option>
+            </select></p>
+            <p style="margin-top: 30px;">Education Details:<br><textarea class="t">Give details about your High school and University here....</textarea></p>
+            <p>Interests:<br><textarea class="x">Your interests.........</textarea></p>
+            <p>Achievements:<br><textarea class="t">What are your Achievements?...</textarea></p>
+            <p>Phone no. <input type="tel" id="phone" name="phone" placeholder="123456789" pattern="\d{9}" required> <input type="button" value="Ok" style="margin-left: 10px; padding: 3px;"></p>
+            <p style="margin-top: 30px;">Other contact details :<br> <input type="text" class="l" ></p>
+        </div>
+
+        <button style="background-color: rgb(21, 21, 116); padding: 5px;width: 80px;color: aliceblue;">Next</button>
+        </section>
+    </body>
+  </form>
+  <script>
+     document.addEventListener('DOMContentLoaded', function () {
+        var form = document.getElementById('portfolioForm');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Validate all fields
+            var inputs = form.querySelectorAll('input, select, textarea');
+            for (var i = 0; i < inputs.length; i++) {
+                if (!inputs[i].value.trim()) {
+                    alert('Please fill out all fields');
+                    return;
+                }
+            }
+
+            // Collect form data
+            var formData = {};
+            inputs.forEach(function (input) {
+                formData[input.name] = input.value;
+            });
+
+            // Convert form data to Excel format
+            var worksheet = XLSX.utils.json_to_sheet([formData]);
+            var workbook = XLSX.utils.book_new();
+            XLSX.utils.book_append_sheet(workbook, worksheet, 'Portfolio');
+
+            // Save Excel file
+            XLSX.writeFile(workbook, 'portfolio.xlsx');
+
+        });
+    });
+
+</script>
+</html>
